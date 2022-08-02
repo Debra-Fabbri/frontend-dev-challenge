@@ -1,0 +1,25 @@
+{
+  "name": "frontend-dev-challenge",
+  "version": "1.0.0",
+  "description": "Prueba de admision para desarrolladores en HTML, CSS, JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/styles-sass.scss css/styles-sass.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Debra-Fabbri/frontend-dev-challenge.git"
+  },
+  "author": "Debra Fabbri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Debra-Fabbri/frontend-dev-challenge/issues"
+  },
+  "homepage": "https://github.com/Debra-Fabbri/frontend-dev-challenge#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
