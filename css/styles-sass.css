@@ -227,24 +227,130 @@ body {
   color: #181010; }
 
 .main__cards {
-  width: 100%;
-  margin: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-  .main__cards img {
-    width: 20%;
-    object-fit: cover;
-    overflow: hidden; }
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; }
 
-.main__card {
-  margin: 20px;
-  width: 20%;
-  height: 350px;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 0px 0px 4px 0 rgba(52, 73, 94, 0.849);
-  border-radius: 4px; }
+.cards {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  max-width: max-content;
+  margin-left: 20px;
+  /*@include breakpoint(sm){
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-top: 1rem;
+		text-align: center;
+		justify-content: center;
+	}
+	@include breakpoint(xxs){
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-top: 1rem;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}*/ }
+
+.card--1 .card__img {
+  background-image: url("../../images/card1.jpg"); }
+
+.card--1 .card__img--hover {
+  background-image: url("../../images/card1.jpg"); }
+
+.card--2 .card__img {
+  background-image: url("../../images/card1.jpg"); }
+
+.card--2 .card__img--hover {
+  background-image: url("../../images/card1.jpg"); }
+
+.card--3 .card__img {
+  background-image: url("../../images/card1.jpg"); }
+
+.card--3 .card__img--hover {
+  background-image: url("../../images/card1.jpg"); }
+
+.card__img {
+  visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px; }
+
+.card__img--hover {
+  transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0; }
+
+.card {
+  margin-right: 25px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  width: 33.3%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  /*@include breakpoint(xs){
+		overflow: hidden;
+		margin-bottom: 50px;
+		
+	}
+	@include breakpoint(xxs){
+		margin-right: 20px;
+		margin-left: 5px;
+		margin-bottom: 50px;
+		width: fit-content;
+		overflow: hidden;
+		
+	}*/ }
+  .card:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1, 1.1); }
+    .card:hover .card__img--hover {
+      height: 100%;
+      opacity: 0.3; }
+    .card:hover .card__info {
+      background-color: transparent;
+      position: relative; }
+
+.card__info {
+  z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px 24px; }
+
+.card__category {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #868686; }
+
+.card__title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', serif; }
 
 .main__gallery {
   width: 100%;
@@ -282,3 +388,33 @@ body {
       height: 5px;
       background: #fff;
       margin: auto; }
+
+.main__publicity {
+  width: 100%;
+  height: 110vh;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.main__carta-publicity {
+  margin-top: 14%;
+  margin-right: 25px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  height: 335px; }
+
+.main__image-card {
+  margin-top: 14%; }
+  .main__image-card img {
+    height: 335px; }
+
+.card--4 .card__img {
+  background-image: url("../../images/photo_05.jpg"); }
+
+.card--4 .card__img--hover {
+  background-image: url("../../images/photo_05.jpg"); }
