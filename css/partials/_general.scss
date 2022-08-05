@@ -82,6 +82,15 @@ body {
     border-color: transparent transparent #fff transparent;
 }
 
+.sesgoarriba {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 35vh 100vw 0 0;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
 /* example class names 
 .button__send {
     &--news {
