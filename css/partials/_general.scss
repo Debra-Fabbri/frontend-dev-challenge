@@ -71,6 +71,17 @@ body {
         transform: translateX(1);
     }
 }
+
+.sesgoabajo {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
 /* example class names 
 .button__send {
     &--news {

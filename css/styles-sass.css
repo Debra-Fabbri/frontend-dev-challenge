@@ -53,6 +53,15 @@ body {
   100% {
     transform: translateX(1); } }
 
+.sesgoabajo {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 35vh 100vw;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent; }
+
 /* example class names 
 .button__send {
     &--news {
@@ -74,50 +83,84 @@ body {
 }
 
  The Hamburger icon with the menu */
-.header__container {
-  height: 70px;
-  background-color: white; }
-
-.header__navbar {
-  width: 300px;
-  height: 100%;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  left: -300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: left 0.8s cubic-bezier(1, 0, 0, 1); }
-  .header__navbar__hamburger-menu {
-    width: 35px;
-    height: 30px;
-    position: fixed;
-    top: 20px;
-    left: 58px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around; }
-    .header__navbar__hamburger-menu .line {
-      width: 100%;
-      height: 3px;
-      background-color: black;
-      transition: all .8s; }
-
-.header__nav__list {
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../images/photo_01.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
   text-align: left; }
-
-.header__nav__item {
-  list-style: none;
-  margin: 25px; }
-
-.header__nav__link {
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  color: black; }
+  .header__container {
+    height: 70px;
+    background-color: white; }
+  .header__navbar {
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.8s cubic-bezier(1, 0, 0, 1); }
+    .header__navbar__hamburger-menu {
+      width: 35px;
+      height: 30px;
+      position: fixed;
+      top: 20px;
+      left: 58px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .header__navbar__hamburger-menu .line {
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        transition: all .8s; }
+  .header__nav__list {
+    text-align: left; }
+  .header__nav__item {
+    list-style: none;
+    margin: 25px; }
+  .header__nav__link {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: black; }
+  .header__texts {
+    width: 35%;
+    margin-top: 100px;
+    padding: 55px;
+    margin-left: 90px; }
+  .header__title {
+    font-size: 55px;
+    margin-bottom: 32px; }
+    .header__title span {
+      color: #F778B9; }
+  .header__subtitulo {
+    width: 57%;
+    font-weight: 300;
+    margin-bottom: 32px; }
+    .header__subtitulo.B {
+      width: 90%; }
+  .header__button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px; }
 
 .change {
   left: 0; }
