@@ -3,7 +3,9 @@ const openAndCloseAccordion = () => {
   alert ('do something')
 } */
 
-/*Hamburger Menu*/
+
+/* -------------------------------------------------------------------------------------------------------- */
+/* Hamburger Menu */
 const iconMenu = document.querySelector(".header__navbar__hamburger-menu");
 const navBar = document.querySelector('.header__navbar');
 
@@ -11,7 +13,10 @@ iconMenu.addEventListener('click', () => {
   navBar.classList.toggle("change");
 })
 
+
+/* -------------------------------------------------------------------------------------------------------- */
 /* SLIDER TESTIMONIAL */
+
 let slider = document.querySelector('.slider-contenedor');
 let sliderInd = document.querySelectorAll('.slider-test');
 let contador = 1;
@@ -36,3 +41,27 @@ function slides(){
     contador = 0;
   }
 }
+
+
+/* -------------------------------------------------------------------------------------------------------- */
+/*   FAQ   */
+
+const accordionBtns = document.querySelectorAll('.accordion');
+
+accordionBtns.forEach((accordion) => {
+  accordion.onclick = function(){
+    this.classList.toggle("is-open");
+
+    let content = this.nextElementSibling;
+    console.log(content);
+
+    if(content.style.maxHeight){
+      //this is if the accordion is open
+      content.style.maxHeight = null;
+    } else {
+      //if the accordion is currently closed
+      content.style.maxHeight = content.scrollHeight + "px";
+      console.log(content.style.maxHeight);
+    }
+  };
+});
