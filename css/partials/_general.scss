@@ -97,16 +97,18 @@ body {
     border-style: solid;
     border-color: #fff transparent transparent transparent;
 }
-/* example class names 
-.button__send {
-    &--news {
 
-    }
+.wrapper{
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    transition: opacity 2.25s, visibility 1s;
+}
 
-    &--form {
-
-    }
-    &:hover {
-
-    }
-}*/
+.fades{
+    opacity: 0;
+    visibility: hidden;
+}

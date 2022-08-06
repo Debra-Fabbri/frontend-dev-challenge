@@ -1,8 +1,24 @@
-/* example function name
-const openAndCloseAccordion = () => {
-  alert ('do something')
-} */
+/* -------------------------------------------------------------------------------------------------------- */
+/* Welcome! In this .js file you will find (separated by comments) 
+the necessary functions for the interaction with the html like:
+submit the form with 'alert', a scroll listener to show/hide some button, 
+FAQ/Accordion click, open and close a modal. among others. 
 
+Greetings!*/
+
+/* -------------------------------------------------------------------------------------------------------- */
+//Let's start!
+/* -------------------------------------------------------------------------------------------------------- */
+
+/**
+ * When the page loads, add the class 'fades' to the element with the class 'wrapper'.
+ */
+const fadeOut = () => {
+  const loaderWrapper = document.querySelector('.wrapper');
+  loaderWrapper.classList.add('fades');
+}
+
+window.addEventListener('load', fadeOut);
 
 /* -------------------------------------------------------------------------------------------------------- */
 /* Hamburger Menu */
