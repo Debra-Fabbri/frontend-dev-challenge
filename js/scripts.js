@@ -9,6 +9,8 @@ const openAndCloseAccordion = () => {
 const iconMenu = document.querySelector(".header__navbar__hamburger-menu");
 const navBar = document.querySelector('.header__navbar');
 
+/* Listening for a click on the iconMenu element and then it is toggling the class "change" on the
+navBar element. */
 iconMenu.addEventListener('click', () => {
   navBar.classList.toggle("change");
 })
@@ -23,10 +25,13 @@ let contador = 1;
 let tamWidth = sliderInd[0].clientWidth;
 let intervalo = 10000;
 
+/* Listening for the window to be resized and then it is setting the tamWidth variable to the width of
+the first sliderInd element. */
 window.addEventListener("resize", function(){
   tamWidth = sliderInd[0].clientWidth;
 });
 
+/* Calling the function `slides()` every 10 seconds. */
 setInterval(function tiempo(){
   slides();
 }, intervalo);
@@ -46,6 +51,7 @@ function slides(){
 /* -------------------------------------------------------------------------------------------------------- */
 /*   FAQ   */
 
+/* A function that is being called when the accordion is clicked. */
 const accordionBtns = document.querySelectorAll('.accordion');
 
 accordionBtns.forEach((accordion) => {

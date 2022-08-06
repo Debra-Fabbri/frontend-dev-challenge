@@ -1,0 +1,114 @@
+.contenedor-contact-us{
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.titulo-contact-us,
+.subtitulo-contact-us {
+    text-align: center;
+    font-weight: 400;
+    font-size: 56px;
+}
+
+.subtitulo-contact-us {
+    font-size: 16px;
+    margin-bottom: 64px;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+input[type="text"],
+input[type="email"] {
+    display: inline-block;
+    padding: 13px;
+    border: none;
+    color: #fff;
+    font-family: 'open sans';
+    background: #486DB7; 
+    margin-bottom: 16px;
+    border-radius: 4px;
+    width: 575px;
+}
+
+
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    background:#486DB7 ;
+    padding: 13px;
+    border: none;
+    color: #fff;
+    font-family: 'open sans';
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    padding: 13px;
+    border: none;
+    color: #fff;
+    background:#486DB7 ;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.input-group, .input-group2{
+    position: relative;
+}
+
+.input, .input2{
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    color: #fff;
+    background-color: transparent;
+    outline: 2px solid #fff;
+}
+
+.input-label, .input-label2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+}
+
+.input:focus+.input-label, .input:valid+.input-label{
+    transform: translate(10px, -14px) scale(.8);
+    color: #d1c5fc;
+    padding-inline: 5px;
+    background-color: #242329;
+}
+
+.input:is(:focus, :valid){
+    outline-color: #d1c5fc;
+}
+
+///////////////
+
+.input2:focus+.input-label2, .input2:valid+.input-label2{
+    transform: translate(10px, -14px) scale(.8);
+    color: #d1c5fc;
+    padding-inline: 5px;
+    background-color: #242329;
+}
+
+.input2:is(:focus, :valid){
+    outline-color: #d1c5fc;
+}
+
