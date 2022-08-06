@@ -21,40 +21,6 @@ body {
   100% {
     background-position: 0% 0%; } }
 
-.wave {
-  border-radius: 1000% 1000% 0 0;
-  position: fixed;
-  width: 200%;
-  height: 12em;
-  animation: wave 10s -3s linear infinite;
-  transform: translate3d(0, 0, 0);
-  opacity: 0.8;
-  bottom: 0;
-  left: 0;
-  z-index: -1; }
-
-.wave:nth-of-type(2) {
-  bottom: -1.25em;
-  animation: wave 18s linear reverse infinite;
-  opacity: 0.8; }
-
-.wave:nth-of-type(3) {
-  bottom: -2.5em;
-  animation: wave 20s -1s reverse infinite;
-  opacity: 0.9; }
-
-@keyframes wave {
-  2% {
-    transform: translateX(1); }
-  25% {
-    transform: translateX(-25%); }
-  50% {
-    transform: translateX(-50%); }
-  75% {
-    transform: translateX(-25%); }
-  100% {
-    transform: translateX(1); } }
-
 .sesgoabajo {
   z-index: 10;
   position: absolute;
@@ -545,6 +511,9 @@ body {
 .card--4 .card__img--hover {
   background-image: url("../../images/photo_05.jpg"); }
 
+.main__contact-us {
+  margin-bottom: 40px; }
+
 .contenedor-contact-us {
   width: 80%;
   overflow: hidden;
@@ -586,7 +555,6 @@ textarea {
   min-width: 100%;
   max-height: 200px;
   min-height: 200px;
-  background: #486DB7;
   padding: 13px;
   border: none;
   color: #fff;
@@ -599,7 +567,6 @@ input[type="submit"] {
   padding: 13px;
   border: none;
   color: #fff;
-  background: #486DB7;
   width: 150px;
   cursor: pointer;
   border-radius: 4px; }
@@ -640,3 +607,56 @@ input[type="submit"] {
 
 .input2:is(:focus, :valid) {
   outline-color: #d1c5fc; }
+
+.footer {
+  background: #486DB7;
+  padding: 30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align: center; }
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: white;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center; }
+
+.footer .row a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s; }
+
+.footer .row a:hover {
+  color: #fff; }
+
+.footer .row ul {
+  width: 100%; }
+
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px; }
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%; }
+
+.par {
+  margin: 20px;
+  width: 450px;
+  text-align: justify; }
+
+@media (max-width: 720px) {
+  .footer {
+    text-align: left;
+    padding: 5%; }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left; }
+  .footer .row a i {
+    margin: 0% 3%; } }
