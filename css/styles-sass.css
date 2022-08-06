@@ -5,7 +5,9 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  overflow: auto;
+  overflow: auto; }
+
+#animation {
   background: linear-gradient(315deg, #F778B9 3%, #B378FF 38%, #486DB7 98%);
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
@@ -417,6 +419,60 @@ body {
 .slider-img {
   width: 30px;
   height: 30px; }
+
+.professionals__fondo {
+  height: 900px;
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex; }
+
+.professionals__title, .professionals__subtitle {
+  color: #fff;
+  text-align: center; }
+
+.professionals__title {
+  font-size: 56px; }
+
+.professionals__subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 64px; }
+
+.professionals__tips {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+  width: 100%;
+  justify-content: space-between; }
+  .professionals__tips .tip {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 4px;
+    color: black;
+    padding: 16px;
+    overflow: hidden;
+    transition: .6s;
+    transform: translate(0);
+    font-weight: 400; }
+    .professionals__tips .tip:hover {
+      color: #fff; }
+    .professionals__tips .tip p {
+      margin: 0; }
+    .professionals__tips .tip::before {
+      content: "";
+      position: absolute;
+      top: -75px;
+      left: -45px;
+      z-index: -1;
+      background: linear-gradient(to right, #F778B9, #B378FF);
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      transition: .6s; }
+    .professionals__tips .tip:hover::before {
+      transform: scale(4.5); }
 
 .main__publicity {
   width: 100%;
