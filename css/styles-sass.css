@@ -51,6 +51,9 @@ body {
   opacity: 0;
   visibility: hidden; }
 
+/*Screen sizes*/
+/*y dsp y hice un mixin:*/
+/*y cuando necesito utilizarlo lo llamo asi directamente :*/
 /*.hero{
     background-size:cover;
     min-height: 500px;
@@ -150,6 +153,9 @@ body {
   transform: rotateZ(45deg) translate(-8px, -6px); }
 
 /*SLIDER*/
+/*Screen sizes*/
+/*y dsp y hice un mixin:*/
+/*y cuando necesito utilizarlo lo llamo asi directamente :*/
 .main__about-us {
   background-color: white; }
   .main__about-us .boton {
@@ -210,24 +216,24 @@ body {
   justify-content: center;
   -webkit-justify-content: center;
   max-width: max-content;
-  margin-left: 20px;
-  /*@include breakpoint(sm){
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
-		margin-top: 1rem;
-		text-align: center;
-		justify-content: center;
-	}
-	@include breakpoint(xxs){
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		margin-top: 1rem;
-		text-align: center;
-		justify-content: center;
-		align-items: center;
-	}*/ }
+  margin-left: 20px; }
+  @media (max-width: 991px) {
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 1rem;
+      text-align: center;
+      justify-content: center; } }
+  @media (max-width: 575px) {
+    .cards {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+      text-align: center;
+      justify-content: center;
+      align-items: center; } }
 
 .card--1 .card__img {
   background-image: url("../../images/card1.jpg"); }
@@ -277,20 +283,7 @@ body {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
-  /*@include breakpoint(xs){
-		overflow: hidden;
-		margin-bottom: 50px;
-		
-	}
-	@include breakpoint(xxs){
-		margin-right: 20px;
-		margin-left: 5px;
-		margin-bottom: 50px;
-		width: fit-content;
-		overflow: hidden;
-		
-	}*/ }
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1); }
   .card:hover {
     box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
     transform: scale(1.1, 1.1); }
@@ -300,6 +293,17 @@ body {
     .card:hover .card__info {
       background-color: transparent;
       position: relative; }
+  @media (max-width: 767px) {
+    .card {
+      overflow: hidden;
+      margin-bottom: 50px; } }
+  @media (max-width: 575px) {
+    .card {
+      margin-right: 20px;
+      margin-left: 5px;
+      margin-bottom: 50px;
+      width: fit-content;
+      overflow: hidden; } }
 
 .card__info {
   z-index: 2;
@@ -320,6 +324,9 @@ body {
   margin-bottom: 10px;
   font-family: 'Roboto Slab', serif; }
 
+/*Screen sizes*/
+/*y dsp y hice un mixin:*/
+/*y cuando necesito utilizarlo lo llamo asi directamente :*/
 .main__gallery {
   width: 100%;
   height: 500px;
@@ -333,10 +340,16 @@ body {
   height: 500px;
   overflow: hidden;
   position: relative; }
+  @media (max-width: 767px) {
+    .main__images {
+      flex-grow: 1; } }
   .main__images img {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+  @media (max-width: 767px) {
+    .main__images.none {
+      display: none; } }
   .main__images .encima {
     position: absolute;
     top: 0;
@@ -386,6 +399,35 @@ body {
   width: 30px;
   height: 30px; }
 
+/*Screen sizes*/
+/*y dsp y hice un mixin:*/
+/*y cuando necesito utilizarlo lo llamo asi directamente :*/
+.professionals.contenedor {
+  width: 80%;
+  height: 400px;
+  overflow: hidden;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
+
+.professionals .boton {
+  display: none; }
+  @media (max-width: 767px) {
+    .professionals .boton {
+      display: inline-block;
+      padding: 6px;
+      width: 128px;
+      font-weight: 300;
+      border: 1px solid white;
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 16px;
+      margin-top: 24px; } }
+
 .professionals__fondo {
   height: 900px;
   position: relative;
@@ -412,6 +454,9 @@ body {
   margin-bottom: 64px;
   width: 100%;
   justify-content: space-between; }
+  @media (max-width: 767px) {
+    .professionals__tips {
+      display: none; } }
   .professionals__tips .tip {
     width: 30%;
     background-color: #fff;
@@ -511,6 +556,9 @@ body {
 .card--4 .card__img--hover {
   background-image: url("../../images/photo_05.jpg"); }
 
+/*Screen sizes*/
+/*y dsp y hice un mixin:*/
+/*y cuando necesito utilizarlo lo llamo asi directamente :*/
 .main__contact-us {
   max-width: 800px;
   width: 90%;
@@ -520,6 +568,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px; }
+    @media (max-width: 767px) {
+      .main__contact-us .formulario {
+        grid-template-columns: 1fr; } }
     .main__contact-us .formulario__label {
       display: block;
       font-weight: 700;
@@ -557,6 +608,9 @@ body {
       margin-right: 10px; }
     .main__contact-us .formulario__grupo-terminos, .main__contact-us .formulario__mensaje, .main__contact-us .formulario__grupo-btn-enviar {
       grid-column: span 2; }
+      @media (max-width: 767px) {
+        .main__contact-us .formulario__grupo-terminos, .main__contact-us .formulario__mensaje, .main__contact-us .formulario__grupo-btn-enviar {
+          grid-column: 1; } }
     .main__contact-us .formulario__mensaje {
       height: 45px;
       line-height: 45px;
@@ -583,6 +637,9 @@ body {
       border-radius: 3px;
       cursor: pointer;
       transition: .1s ease all; }
+      @media (max-width: 767px) {
+        .main__contact-us .formulario__btn {
+          width: 100%; } }
       .main__contact-us .formulario__btn:hover {
         box-shadow: 3px 0px 30px #a3a3a3; }
     .main__contact-us .formulario__mensaje-exito {
@@ -607,55 +664,66 @@ body {
 .formulario__grupo-incorrecto .formulario__input {
   border: 3px solid #bb2929; }
 
+/*Screen sizes*/
+/*y dsp y hice un mixin:*/
+/*y cuando necesito utilizarlo lo llamo asi directamente :*/
 .footer {
   background: #486DB7;
   padding: 30px 0px;
   font-family: 'Play', sans-serif;
   text-align: center; }
+  @media (max-width: 767px) {
+    .footer {
+      text-align: left;
+      padding: 5%; } }
+  .footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: white;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center; }
+    @media (max-width: 767px) {
+      .footer .row {
+        flex-direction: column;
+        margin: 10px 0px;
+        text-align: left; } }
+    .footer .row a {
+      text-decoration: none;
+      color: white;
+      transition: 0.5s; }
+      .footer .row a:hover {
+        color: #fff; }
+    .footer .row ul {
+      width: 100%; }
+    .footer .row ul li {
+      display: inline-block;
+      margin: 0px 30px; }
+      @media (max-width: 767px) {
+        .footer .row ul li {
+          display: block;
+          margin: 10px 0px;
+          text-align: left; } }
+    .footer .row a i {
+      font-size: 2em;
+      margin: 0% 1%; }
+      @media (max-width: 767px) {
+        .footer .row a i {
+          margin: 0% 3%; } }
+  .footer .par {
+    margin: 20px;
+    width: 450px;
+    text-align: justify; }
+    @media (max-width: 575px) {
+      .footer .par {
+        margin: 20px;
+        width: auto;
+        text-align: justify; } }
 
-.footer .row {
-  width: 100%;
-  margin: 1% 0%;
-  padding: 0.6% 0%;
-  color: white;
-  font-size: 0.8em;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center; }
-
-.footer .row a {
-  text-decoration: none;
-  color: white;
-  transition: 0.5s; }
-
-.footer .row a:hover {
-  color: #fff; }
-
-.footer .row ul {
-  width: 100%; }
-
-.footer .row ul li {
-  display: inline-block;
-  margin: 0px 30px; }
-
-.footer .row a i {
-  font-size: 2em;
-  margin: 0% 1%; }
-
-.par {
-  margin: 20px;
-  width: 450px;
-  text-align: justify; }
-
-@media (max-width: 720px) {
-  .footer {
-    text-align: left;
-    padding: 5%; }
-  .footer .row ul li {
-    display: block;
-    margin: 10px 0px;
-    text-align: left; }
-  .footer .row a i {
-    margin: 0% 3%; } }
+/*Screen sizes*/
+/*y dsp y hice un mixin:*/
+/*y cuando necesito utilizarlo lo llamo asi directamente :*/

@@ -1,4 +1,32 @@
-.professionals{
+@import "./media-queries";
+
+.professionals {
+    &.contenedor{
+        width: 80%;
+        height: 400px;
+        overflow: hidden;
+        justify-content: center;
+        margin: auto;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .boton{
+        display: none;
+        @include breakpoint(xs){
+            display: inline-block;
+            padding: 6px;
+            width: 128px;
+            font-weight: 300;
+            border: 1px solid white;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 16px;
+            margin-top: 24px;
+        }
+    }
     &__fondo {
         height: 900px;
         position: relative;
@@ -25,6 +53,9 @@
         margin-bottom: 64px;
         width: 100%;
         justify-content: space-between;
+        @include breakpoint(xs){
+            display:none;
+        }
         .tip {
             width: 30%;
             background-color: #fff;

@@ -1,0 +1,57 @@
+/*Screen sizes*/
+$xxxs: 330px;
+
+$xxs: 575px;
+
+$xs: 767px;
+
+$sm: 991px;
+
+$md: 1200px;
+
+$lg: 1400px;
+
+
+
+/*y dsp y hice un mixin:*/
+
+@mixin breakpoint($class) {
+
+    @if $class == xxs {
+        @media (max-width: $xxs) { @content; }
+    }
+
+
+    @if $class == xs {
+        @media (max-width: $xs) { @content; }
+    }
+
+
+    @else if $class == sm {
+        @media (max-width: $sm) { @content; }
+    }
+
+
+    @else if $class == md {
+        @media (max-width: $md) { @content; }
+    }
+
+
+    @else if $class == lg {
+        @media (max-width: $lg) { @content; }
+    }
+
+    @else if $class == XS {
+        @media (min-width: $XS) { @content;}
+    }
+
+    @else if $class == xxxs{
+        @media (max-width: $xxxs) { @content; }
+    }
+}
+
+/*y cuando necesito utilizarlo lo llamo asi directamente :*/ 
+
+@include breakpoint(xxs){
+
+}

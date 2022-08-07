@@ -1,3 +1,5 @@
+@import "./media-queries";
+
 .main {
     &__about-us {
         background-color: white;
@@ -63,7 +65,7 @@
 	-webkit-justify-content: center;
 	max-width: max-content;
 	margin-left: 20px;
-	/*@include breakpoint(sm){
+	@include breakpoint(sm){
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
@@ -79,7 +81,7 @@
 		text-align: center;
 		justify-content: center;
 		align-items: center;
-	}*/
+	}
 }
 .card--1 {
 	.card__img {
@@ -149,7 +151,7 @@
 			position: relative;
 		}
 	}
-	/*@include breakpoint(xs){
+	@include breakpoint(xs){
 		overflow: hidden;
 		margin-bottom: 50px;
 		
@@ -161,7 +163,7 @@
 		width: fit-content;
 		overflow: hidden;
 		
-	}*/
+	}
 }
 .card__info {
 	z-index: 2;
