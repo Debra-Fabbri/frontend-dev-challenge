@@ -763,10 +763,10 @@ button {
     height: 335px; }
 
 .card--4 .card__img {
-  background-image: url("../../images/photo_05.jpg"); }
+  background-image: url("../images/photo_05.jpg"); }
 
 .card--4 .card__img--hover {
-  background-image: url("../../images/photo_05.jpg"); }
+  background-image: url("../images/photo_05.jpg"); }
 
 /*Screen sizes*/
 /*y dsp y hice un mixin:*/
