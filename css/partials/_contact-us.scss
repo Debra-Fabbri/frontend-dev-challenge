@@ -5,6 +5,12 @@
 	width: 90%;
 	margin: auto;
 	padding: 40px;
+    &__container{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
     .formulario {
         display: grid;
         grid-template-columns: 1fr 1fr;
