@@ -14,8 +14,8 @@ Greetings!*/
  * When the page loads, add the class 'fades' to the element with the class 'wrapper'.
  */
 const fadeOut = () => {
-  const loaderWrapper = document.querySelector('.wrapper');
-  loaderWrapper.classList.add('fades');
+	const loaderWrapper = document.querySelector('.wrapper');
+	loaderWrapper.classList.add('fades');
 }
 
 window.addEventListener('load', fadeOut);
@@ -28,7 +28,7 @@ const navBar = document.querySelector('.header__navbar');
 /* Listening for a click on the iconMenu element and then it is toggling the class "change" on the
 navBar element. */
 iconMenu.addEventListener('click', () => {
-  navBar.classList.toggle("change");
+	navBar.classList.toggle("change");
 })
 
 
@@ -38,14 +38,14 @@ const openModal = document.querySelector('.hero__cta');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.modal__close');
 
-openModal.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal.classList.add('modal--show');
+openModal.addEventListener('click', (e) => {
+	e.preventDefault();
+	modal.classList.add('modal--show');
 });
 
-closeModal.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal.classList.remove('modal--show');
+closeModal.addEventListener('click', (e) => {
+	e.preventDefault();
+	modal.classList.remove('modal--show');
 });
 
 
@@ -54,14 +54,14 @@ const openModal2 = document.querySelector('.hero__cta2');
 const modal2 = document.querySelector('.modal2');
 const closeModal2 = document.querySelector('.modal__close2');
 
-openModal2.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal2.classList.add('modal2--show');
+openModal2.addEventListener('click', (e) => {
+	e.preventDefault();
+	modal2.classList.add('modal2--show');
 });
 
-closeModal2.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal2.classList.remove('modal2--show');
+closeModal2.addEventListener('click', (e) => {
+	e.preventDefault();
+	modal2.classList.remove('modal2--show');
 });
 
 
@@ -76,24 +76,24 @@ let intervalo = 10000;
 
 /* Listening for the window to be resized and then it is setting the tamWidth variable to the width of
 the first sliderInd element. */
-window.addEventListener("resize", function(){
-  tamWidth = sliderInd[0].clientWidth;
+window.addEventListener("resize", function () {
+	tamWidth = sliderInd[0].clientWidth;
 });
 
 /* Calling the function `slides()` every 10 seconds. */
-setInterval(function tiempo(){
-  slides();
+setInterval(function tiempo() {
+	slides();
 }, intervalo);
 
 
-function slides(){
-  slider.style.transform = 'translate(' + ( - tamWidth * contador) + 'px)';
-  slider.style.transition = 'transform 1s';
-  contador++;
+function slides() {
+	slider.style.transform = 'translate(' + (- tamWidth * contador) + 'px)';
+	slider.style.transition = 'transform 1s';
+	contador++;
 
-  if(contador == sliderInd.length){
-    contador = 0;
-  }
+	if (contador == sliderInd.length) {
+		contador = 0;
+	}
 }
 
 
@@ -104,27 +104,27 @@ function slides(){
 const accordionBtns = document.querySelectorAll('.accordion');
 
 accordionBtns.forEach((accordion) => {
-  accordion.onclick = function(){
-    this.classList.toggle("is-open");
+	accordion.onclick = function () {
+		this.classList.toggle("is-open");
 
-    let content = this.nextElementSibling;
-    console.log(content);
+		let content = this.nextElementSibling;
+		console.log(content);
 
-    if(content.style.maxHeight){
-      //this is if the accordion is open
-      content.style.maxHeight = null;
-    } else {
-      //if the accordion is currently closed
-      content.style.maxHeight = content.scrollHeight + "px";
-      console.log(content.style.maxHeight);
-    }
-  };
+		if (content.style.maxHeight) {
+			//this is if the accordion is open
+			content.style.maxHeight = null;
+		} else {
+			//if the accordion is currently closed
+			content.style.maxHeight = content.scrollHeight + "px";
+			console.log(content.style.maxHeight);
+		}
+	};
 });
 
 
 /* -------------------------------------------------------------------------------------------------------- */
 /*   Contact-us   
-    form validation
+	form validation
 */
 
 const formulario = document.getElementById('formulario');
@@ -132,7 +132,7 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
 	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-  lastName:  /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	lastName: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	phone: /^\d{7,14}$/ // 7 a 14 numeros.
 }
@@ -148,21 +148,21 @@ const formValidation = (e) => {
 	switch (e.target.name) {
 		case "name":
 			validarCampo(expresiones.name, e.target, 'name');
-		break;
+			break;
 		case "lastName":
 			validarCampo(expresiones.lastName, e.target, 'lastName');
-		break;
+			break;
 		case "email":
 			validarCampo(expresiones.email, e.target, 'email');
-		break;
+			break;
 		case "phone":
 			validarCampo(expresiones.phone, e.target, 'phone');
-		break;
+			break;
 	}
 }
 
 const validarCampo = (expresion, input, campo) => {
-	if(expresion.test(input.value)){
+	if (expresion.test(input.value)) {
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
@@ -189,14 +189,14 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-	if(campos.name && campos.lastName && campos.email && campos.phone && terminos.checked ){
+	if (campos.name && campos.lastName && campos.email && campos.phone && terminos.checked) {
 		formulario.reset();
-		
+
 		Swal.fire(
-      'Muchas Gracias por contactarnos!',
-      'El formulario fue enviado exitosamente!',
-      'success'
-    )
+			'Muchas Gracias por contactarnos!',
+			'El formulario fue enviado exitosamente!',
+			'success'
+		)
 
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
 			icono.classList.remove('formulario__grupo-correcto');
