@@ -43,4 +43,4 @@ c. Como sugerencia: recomendamos crear una función de *alert* para enviar el fo
 
 ## Resultado final
 
-![DesktopMockup](https://user-images.githubusercontent.com/99552991/183316177-b4168f87-4055-4b02-849e-4f00a805f870.png)
+![DesktopMockup](https://user-images.githubusercontent.com/99552991/183324797-55be3c61-e0ac-4335-a5dc-eae786aac02a.png)
